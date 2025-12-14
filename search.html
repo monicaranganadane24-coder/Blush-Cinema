@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search</title>
+  <link rel="stylesheet" href="search.css" />
+</head>
+<body>
+
+  <header>
+    <img src="logo.PNG" alt="Logo du site Blush Cinema" class="logo" />
+    <nav aria-label="Navigation principale">
+      <a href="home.html">Home</a>
+      <a href="search.html">Search</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Search Movies</h2>
+    <div id="barre_recherche">
+      <input id="champ_recherche" type="text" placeholder="Search movies..." autocomplete="off" />
+      <button id="bouton_recherche" type="button">Search</button>
+    </div>
+
+    <div id="resultats_recherche" aria-live="polite"></div>
+    <button id="charger_film" style="display:none;" aria-label="Charger plus de résultats">Load more</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blush Cinema - Monica et Lofty</p>
+  </footer>
+
+  <script type="module" src="Blush-Cinema/search.js"></script>
+</body>
+</html>
