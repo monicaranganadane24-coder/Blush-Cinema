@@ -22,6 +22,7 @@ header {
   background: rgba(58, 0, 102, 0.85);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
+
 .logo {
   height: 100px;
   object-fit: contain;
@@ -85,6 +86,12 @@ main h2 {
   color: #000;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#bouton_recherche:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 238, 255, 0.5);
 }
 
 .ligne_films {
@@ -92,7 +99,7 @@ main h2 {
   justify-content: center;
   gap: 20px;
   margin-bottom: 2rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .carte_film {
@@ -172,39 +179,212 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 992px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
+@media (min-width: 1400px) {
+  main {
+    max-width: 1400px;
   }
 
-  nav {
-    flex-direction: row;
-    gap: 12px;
-    margin-top: 0;
+  main h2 {
+    font-size: 2.5rem;
+  }
+
+  #champ_recherche {
+    max-width: 600px;
+    font-size: 1.1rem;
+  }
+
+  #bouton_recherche {
+    font-size: 1.1rem;
+  }
+
+  .carte_film {
+    flex: 0 0 220px;
+  }
+
+  .carte_film img {
+    height: 320px;
   }
 
   .logo {
-    margin-right: auto;
-  }
-
-  .ligne_films {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .carte_film {
-    flex: 0 0 45%;
-    max-width: 300px;
-    margin: 0 auto;
+    height: 120px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  main {
+    margin: 20px auto;
+  }
+
+  main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #champ_recherche {
+    max-width: 400px;
+  }
+
+  .ligne_films {
+    gap: 15px;
+  }
+
+  .carte_film {
+    flex: 0 0 calc(33.333% - 15px);
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 15px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  #barre_recherche {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #champ_recherche {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  #bouton_recherche {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+  }
+
+  .ligne_films {
+    gap: 12px;
+  }
+
+  .carte_film {
+    flex: 0 0 calc(50% - 12px);
+    max-width: 200px;
+  }
+
+  .carte_film img {
+    height: 240px;
+  }
+
+  .carte_film h3 {
+    font-size: 0.95rem;
+  }
+
+  #charger_film {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  main h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  #barre_recherche {
+    margin-bottom: 1.5rem;
+  }
+
+  #champ_recherche {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  #bouton_recherche {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .ligne_films {
+    gap: 10px;
+  }
+
   .carte_film {
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .carte_film img {
+    height: 280px;
+  }
+
+  .carte_film h3 {
+    font-size: 1rem;
+  }
+
+  .learn-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  #charger_film {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 20px auto;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 12px 15px;
   }
 }
